@@ -1,6 +1,6 @@
-Kotlin TornadoFx (JavaFx) Demo
-===============================
+TornadoFx Open New Window Demo
+======================================
 
-A simple "Hello world" demo for TornadoFX.
+It's not like the JavaFX's, TornadoFx provides `replaceWith` to replace a new view with current.
 
 Run `Hello.kt` from your IDE.

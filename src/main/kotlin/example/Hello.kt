@@ -5,7 +5,9 @@ import tornadofx.*
 
 class HelloWorld : View() {
     override val root = hbox {
-        label("Hello world")
+        button("Open new window").setOnAction {
+            replaceWith(Another())
+        }
     }
 }
 
@@ -15,12 +17,20 @@ class HelloWorldStyle : Stylesheet() {
             prefWidth = 400.px
             prefHeight = 400.px
             alignment = Pos.CENTER
-            fontSize = 50.px
         }
     }
 }
 
 class HelloWorldApp : App(HelloWorld::class, HelloWorldStyle::class)
+
+class Another : View() {
+    override val root = hbox {
+        label("new window")
+        label("new window")
+        label("new window")
+        label("new window")
+    }
+}
 
 fun main(args: Array<String>) {
     launch<HelloWorldApp>()
